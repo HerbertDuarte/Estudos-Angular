@@ -1,9 +1,9 @@
 @if(variant === 'gradient'){
-<button  class="rounded-full bg-gradient-to-b from-[#8355FF] to-[#4a2aa0] px-8 py-4 text-lg font-bold text-white">
+<button (click)="onSubmit"  class="rounded-full bg-gradient-to-b from-[#8355FF] to-[#4a2aa0] px-8 py-4 text-lg font-bold text-white">
   {{text}}
 </button>
 }@else {
-  <button  class="rounded-full bg-white px-8 py-4 text-lg font-bold text-zinc-800">
+  <button (click)="onSubmit" class="rounded-full bg-white px-8 py-4 text-lg font-bold text-zinc-800">
     {{text}}
   </button>
 }

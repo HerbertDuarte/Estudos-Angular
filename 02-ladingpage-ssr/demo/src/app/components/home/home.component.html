@@ -49,24 +49,13 @@
         </p>
       </div>
 
-      <form class="flex flex-col justify-between items-start flex-1 gap-4">
-        <div class="w-full">
-          <label for="name">Nome</label>
-          <input class="my-5 w-full outline-none bg-transparent border-b border-white" id="name" type="text">
-        </div>
-        <div class="w-full">
-          <label for="email">Email</label>
-          <input class="my-5 w-full outline-none bg-transparent border-b border-white" id="email" type="text">
-        </div>
-
-        <app-btn variant="white" text="se inscreva"></app-btn>
-      </form>
+      <app-form-subscribe></app-form-subscribe>
     </div>
   </section>
 
   <section class="flex justify-between items-center max-w-[1200px] gap-12">
     <div class="flex-1">
-      <img ngSrc="/assets/team.png" height="590" width="610" alt="team">
+      <img ngSrc="/assets/team.png" [priority]="true" height="590" width="610" alt="team">
       <div class="py-3 space-y-3">
         <p class="text-3xl font-medium">Equipe capacitada</p>
         <p class="text-zinc-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.
@@ -75,7 +64,7 @@
     </div>
 
     <div class="flex-1">
-      <img ngSrc="/assets/project-guide.png" height="590" width="610" alt="team">
+      <img ngSrc="/assets/project-guide.png" [priority]="true" height="590" width="610" alt="team">
       <div class="py-3 space-y-3">
         <p class="text-3xl font-medium">Seus projetos guiados do zero</p>
         <p class="text-zinc-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.

@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { EventEmitter } from 'stream';
 
 type BtnVariant = "gradient" | "white"
 
@@ -12,5 +13,9 @@ export class BtnComponent {
 
   @Input() text : string = ""
   @Input() variant : BtnVariant = "gradient"
+  @Output("submit") onSubmit = new EventEmitter()
 
+  submit(){
+    this.onSubmit.emit();
+  }
 }

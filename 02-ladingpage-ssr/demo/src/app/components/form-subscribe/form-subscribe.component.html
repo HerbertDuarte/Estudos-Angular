@@ -1,0 +1,14 @@
+<form [formGroup]="formSubscribe" class="flex flex-col justify-between items-start flex-1 gap-4">
+ <div class="w-full">
+  <label for="name">Nome</label>
+  <input formControlName="name" class="my-5 w-full outline-none bg-transparent border-b border-white" id="name"
+   type="text">
+ </div>
+ <div class="w-full">
+  <label for="email">Email</label>
+  <input formControlName="email" class="my-5 w-full outline-none bg-transparent border-b border-white" id="email"
+   type="text">
+ </div>
+
+ <app-btn (submit)="onSubmit" variant="white" text="se inscreva"></app-btn>
+</form>
