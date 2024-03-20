@@ -12,4 +12,5 @@ export class BtnComponent {
 
   @Input() text : string = ""
   @Input() variant : BtnVariant = "gradient"
+
 }
