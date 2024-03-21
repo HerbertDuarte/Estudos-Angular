@@ -8,6 +8,11 @@ import { FormSubscribeComponent } from '../form-subscribe/form-subscribe.compone
   selector: 'app-home',
   standalone: true,
   imports: [NgOptimizedImage, BtnComponent, RouterLink, FormSubscribeComponent],
-  templateUrl: './home.component.html',
+  templateUrl:'./home.component.html',
 })
-export class HomeComponent {}
+export class HomeComponent {
+
+  emptyFunction(){
+    
+  }
+}

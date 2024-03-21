@@ -1,9 +1,19 @@
 @if(variant === 'gradient'){
-<button (click)="onSubmit"  class="rounded-full bg-gradient-to-b from-[#8355FF] to-[#4a2aa0] px-8 py-4 text-lg font-bold text-white">
+<button (click)="submit()" [disabled]="disable"
+  [class]="(loading && 'opacity-70 ')+ ' disabled:opacity-70 disabled:cursor-not-allowed rounded-full bg-gradient-to-b from-[#8355FF] to-[#4a2aa0] px-8 py-4 text-lg font-bold text-white'">
+  @if(loading){
+  Carregando...
+  }@else {
   {{text}}
+  }
 </button>
 }@else {
-  <button (click)="onSubmit" class="rounded-full bg-white px-8 py-4 text-lg font-bold text-zinc-800">
-    {{text}}
-  </button>
+<button (click)="submit()" [disabled]="disable"
+  [class]=" (loading && 'opacity-70 ')+' disabled:opacity-70 disabled:cursor-not-allowed rounded-full bg-white px-8 py-4 text-lg font-bold text-zinc-800'">
+  @if(loading){
+  Carregando...
+  }@else {
+  {{text}}
+  }
+</button>
 }

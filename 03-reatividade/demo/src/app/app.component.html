@@ -1,0 +1,16 @@
+<main>
+  <h1>03-Reatividade</h1>
+  <form [formGroup]="form" class="main-form">
+    {{text1}} <input formControlName="dolar" [value]="form.value.dolar" placeholder="digite um valor em dolar"
+      type="number">
+    <button [disabled]="loading()" (click)="switch()">
+      @if(loading()){
+      carregando
+      }
+      @else{
+      mudar
+      }
+    </button>
+    <p>{{text2}} {{convert().toFixed(2).toString().replace(".", ",") }}</p>
+  </form>
+</main>

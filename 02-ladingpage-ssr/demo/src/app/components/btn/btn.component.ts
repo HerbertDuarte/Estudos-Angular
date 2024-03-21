@@ -1,21 +1,21 @@
-import { Component, Input, Output } from '@angular/core';
-import { EventEmitter } from 'stream';
+import { Component, Input, Output ,EventEmitter} from '@angular/core';
 
-type BtnVariant = "gradient" | "white"
+type BtnVariant = 'gradient' | 'white';
 
 @Component({
-  selector: 'app-btn',
+  selector: 'btn-component',
   standalone: true,
   imports: [],
   templateUrl: './btn.component.html',
 })
 export class BtnComponent {
+  @Input() text: string = '';
+  @Input() variant: BtnVariant = 'gradient';
+  @Input() loading : boolean = false;
+  @Input() disable : boolean = false;
+  @Output("submit") onSubmit = new EventEmitter();
 
-  @Input() text : string = ""
-  @Input() variant : BtnVariant = "gradient"
-  @Output("submit") onSubmit = new EventEmitter()
-
-  submit(){
+  submit() {
     this.onSubmit.emit();
   }
 }
