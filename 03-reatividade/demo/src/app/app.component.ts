@@ -33,6 +33,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loadData();
+  }
+
+  loadData() {
     this.loading.set(true);
 
     this.service.handle(this.factor).subscribe(
